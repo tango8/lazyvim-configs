@@ -8,4 +8,8 @@ return {
       require("gitsigns").setup() -- Default setup (no extra config)
     end,
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    lazy = false, -- override to load eagerly, not lazily, should improve its startup speed
+  },
 }
