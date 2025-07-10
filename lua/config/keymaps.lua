@@ -14,15 +14,15 @@ for _, mode in ipairs(movement_modes) do
   map(mode, "n", "l") -- move right
   map(mode, "-", "$") -- end of line
   map(mode, "_", "^") -- start of line
+  map(mode, "j", "d")
 end
+
+map("n", "jj", "dd")
 
 -- Command mode from s/S
 map("n", "s", ":")
 map("n", "S", ":")
 
--- Remap destructive functionality
-map("n", "j", "d")
-map("v", "j", "d") -- visual mode delete
 map("n", "l", "n") -- search next
 map("n", "L", "N") -- search previous
 
