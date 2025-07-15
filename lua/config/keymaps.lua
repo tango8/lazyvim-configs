@@ -33,7 +33,7 @@ map("n", "D", "<C-w><C-r>")
 
 -- Line jump
 map("n", "H", "8j")
-
+map("n", "T", "8k")
 -- Optional: disable original destructive keys
 for _, mode in ipairs(movement_modes) do
   map(mode, "c", "<Nop>")
