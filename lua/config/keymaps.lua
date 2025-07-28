@@ -15,8 +15,10 @@ for _, mode in ipairs(movement_modes) do
   map(mode, "H", "J")
   map(mode, "-", "$") -- end of line
   map(mode, "_", "^") -- start of line
-  map(mode, "j", "d")
+  map(mode, "j", "d") -- delete
   map(mode, "J", "D")
+  map(mode, "k", "s") -- delete, subsequently enter insert mode
+  map(mode, "K", "S")
   map(mode, "<C-j>", "<C-d>zz")
   map(mode, "<C-u>", "<C-u>zz")
   map(mode, "D", "<Nop>")
