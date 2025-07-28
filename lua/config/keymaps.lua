@@ -12,9 +12,15 @@ for _, mode in ipairs(movement_modes) do
   map(mode, "h", "j") -- move down
   map(mode, "t", "k") -- move up
   map(mode, "n", "l") -- move right
+  map(mode, "H", "J")
   map(mode, "-", "$") -- end of line
   map(mode, "_", "^") -- start of line
   map(mode, "j", "d")
+  map(mode, "J", "D")
+  map(mode, "<C-j>", "<C-d>zz")
+  map(mode, "<C-u>", "<C-u>zz")
+  map(mode, "D", "<Nop>")
+  map(mode, "<C-d>", "<Nop>") -- Canceling things out
 end
 
 map("n", "jj", "dd")
@@ -25,16 +31,3 @@ map("n", "S", ":")
 
 map("n", "l", "n") -- search next
 map("n", "L", "N") -- search previous
-
--- Window controls
-map("n", "N", "<C-w><C-w>")
-map("n", "T", "<C-w><C-r>")
-map("n", "D", "<C-w><C-r>")
-
--- Line jump
-map("n", "H", "8j")
-map("n", "T", "8k")
--- Optional: disable original destructive keys
-for _, mode in ipairs(movement_modes) do
-  map(mode, "c", "<Nop>")
-end
