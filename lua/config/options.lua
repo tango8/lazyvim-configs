@@ -5,3 +5,5 @@
 vim.opt.clipboard = "unnamedplus" -- every yank copies to clipboard
 vim.opt.statuscolumn = ""
 vim.opt.numberwidth = 2
+
+vim.g.snacks_animate = false

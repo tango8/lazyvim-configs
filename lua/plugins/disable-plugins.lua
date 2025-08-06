@@ -7,4 +7,8 @@ return {
 		"echasnovski/mini.pairs",
 		enabled = false, -- disable mini.pairs (auto pairs)
 	},
+	{
+		"echasnovski/mini.animate",
+		enabled = false,
+	},
 }

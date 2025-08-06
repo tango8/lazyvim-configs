@@ -13,16 +13,12 @@ for _, mode in ipairs(movement_modes) do
   map(mode, "t", "k") -- move up
   map(mode, "n", "l") -- move right
   map(mode, "H", "J")
-  map(mode, "-", "$") -- end of line
-  map(mode, "_", "^") -- start of line
   map(mode, "j", "d") -- delete
   map(mode, "J", "D")
-  map(mode, "k", "s") -- delete, subsequently enter insert mode
-  map(mode, "K", "S")
-  map(mode, "<C-j>", "<C-d>zz")
+  map(mode, "<C-d>", "<C-d>zz")
   map(mode, "<C-u>", "<C-u>zz")
   map(mode, "D", "<Nop>")
-  map(mode, "<C-d>", "<Nop>") -- Canceling things out
+  map(mode, "k", "<Nop>")
 end
 
 map("n", "jj", "dd")
