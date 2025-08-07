@@ -17,6 +17,7 @@ for _, mode in ipairs(movement_modes) do
   map(mode, "J", "D")
   map(mode, "<C-d>", "<C-d>zz")
   map(mode, "<C-u>", "<C-u>zz")
+  -- unmap
   map(mode, "D", "<Nop>")
   map(mode, "k", "<Nop>")
 end
