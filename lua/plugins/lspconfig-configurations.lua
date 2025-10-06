@@ -1,30 +1,22 @@
--- manages things like pyright and ruff
+-- lspconfig manages things like pyright and ruff
 
-return {}
---return {
---  {
---    "neovim/nvim-lspconfig",
---    opts = {
---      servers = {
---        ruff = {
---          mason = false, -- prevents Mason from installing it
---          autostart = false, -- prevents it from starting automatically
---        },
---      },
---    },
---  },
---}
-
---return {
---  {
---    "neovim/nvim-lspconfig",
---    opts = {
---      servers = {
---        pyright = {
---          mason = false,
---          autostart = false,
---        },
---      },
---    },
---  },
---}
+return {
+	{
+		"neovim/nvim-lspconfig",
+		opts = {
+			servers = {
+				gdscript = { -- your gdscript config here },
+					-- add other custom servers here
+				},
+				setup = {
+					-- optional: function overrides per server
+					gdscript = function(server, opts)
+						-- custom setup logic, return true if you handle setup here to skip default
+						require("lspconfig").gdscript.setup(opts)
+						return true
+					end,
+				},
+			},
+		},
+	},
+}
