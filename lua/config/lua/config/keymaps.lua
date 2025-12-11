@@ -15,6 +15,11 @@ for _, mode in ipairs(movement_modes) do
   map(mode, "H", "J")
   map(mode, "j", "d") -- delete
   map(mode, "J", "D")
+<<<<<<< HEAD:lua/config/keymaps.lua
+=======
+  map(mode, "-", "$") -- end of line
+  map(mode, "_", "^") -- beginning of line
+>>>>>>> 00e4a32 (- and _ end and beginning of line & other stuff):keymaps.lua
   map(mode, "<C-d>", "<C-d>zz")
   map(mode, "<C-u>", "<C-u>zz")
   -- unmap
