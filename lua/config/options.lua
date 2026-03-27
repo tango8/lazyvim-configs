@@ -17,3 +17,12 @@ vim.g.autoformat = true
 vim.g.autoformat_ignore_filetypes = {
     "dotenv",
 }
+
+vim.opt.listchars = {
+    tab = "  ",
+    trail = "-",
+    lead = "·",
+    nbsp = "␣",
+    extends = "…",
+    precedes = "…",
+}
