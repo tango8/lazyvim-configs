@@ -1,6 +1,6 @@
 -- Put Mason managed things here
 -- lspconfig manages things like pyright and ruff
--- tbh idk why theres mason-lspconfig but no mason-treesitter rn
+-- theres no mason-treesitter cus mason manages external binaries as opposed to syntax highlighting which interfaces with nvim internally
 
 return {
 	-- Mason configs if desired
@@ -25,6 +25,7 @@ return {
 				"jsonls",
 				"marksman",
 				"pyright",
+				"ruff",
 			},
 			automatic_installation = true,
 		},
@@ -41,19 +42,28 @@ return {
 				jdtls = {},
 				jsonls = {},
 				marksman = {},
-				pyright = {},
+				pyright = { -- disable Pyright functionality that ruff already handles
+					settings = {
+						pyright = {
+							disableOrganizeImports = true,
+						},
+						python = {
+							analysis = {
+								ignore = { "*" },
+								reportUnusedImport = "none",
+								reportUnusedVariable = "none",
+							},
+						},
+					},
+				},
+				ruff = {},
 				rust_analyzer = {},
 				gdscript = {
 					cmd = { "nc", "localhost", "6008" },
 					root_dir = require("lspconfig.util").root_pattern("project.godot"),
 					filetypes = { "gdscript" },
 				},
-				dartls = {
-					cmd = { "dart", "language-server", "--protocol=lsp" },
-					filetypes = { "dart" },
-					init_options = { closingLabels = true },
-					root_dir = require("lspconfig.util").root_pattern("pubspec.yaml"),
-				},
+				dartls = {},
 			},
 		},
 	},
