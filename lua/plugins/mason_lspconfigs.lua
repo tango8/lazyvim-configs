@@ -21,7 +21,7 @@ return {
 			ensure_installed = {
 				"bashls",
 				"clangd",
-				"jdtls",
+				"jdtls", -- NOTE: Doesn't work for some reason
 				"jsonls",
 				"marksman",
 				"pyright",
