@@ -20,6 +20,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"bashls",
+				"gopls",
 				"clangd",
 				"jdtls", -- NOTE: Doesn't work for some reason
 				"jsonls",
@@ -37,6 +38,7 @@ return {
 		opts = {
 			servers = {
 				-- Configure if desired
+				gopls = {},
 				bashls = {},
 				clangd = {},
 				jdtls = {},

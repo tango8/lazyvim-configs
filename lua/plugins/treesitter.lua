@@ -4,6 +4,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
 			ensure_installed = {
+				"go",
 				"bash",
 				"c", -- for clangd (C/C++)
 				"cpp",
@@ -15,6 +16,7 @@ return {
 				"gdscript",
 			},
 			auto_install = true,
+			build = ":TSUpdate",
 			highlight = {
 				enable = true,
 			},

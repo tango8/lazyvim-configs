@@ -40,7 +40,7 @@ vim.keymap.set("n", "<leader>st", function()
     Snacks.picker.treesitter({
         filter = {
             -- only classes and functions
-            default = { "Class", "Method", "Function" },
+            default = { "Class", "Struct", "Method", "Function" },
         },
     })
 end, { desc = "Treesitter Pruned Symbols" })
@@ -56,13 +56,3 @@ end, { desc = "Todo Tags" })
 vim.keymap.set("n", "<leader>sE", function()
     Snacks.picker.todo_comments()
 end, { desc = "Todo Tags Workspace" })
-
--- NOTE:
--- FAILED:
--- TEST:
--- PERF:
--- XXX:
--- ISSUE:
--- FIXME:
--- HACK:
--- TODO:
