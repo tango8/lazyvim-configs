@@ -51,8 +51,8 @@ end, { desc = "Treesitter Symbols" })
 
 -- Map Snacks picker for Todo to e and E
 vim.keymap.set("n", "<leader>se", function()
-    Snacks.picker.todo_comments({ dirs = { vim.api.nvim_buf_get_name(0) } })
-end, { desc = "Todo Tags" })
-vim.keymap.set("n", "<leader>sE", function()
     Snacks.picker.todo_comments()
 end, { desc = "Todo Tags Workspace" })
+vim.keymap.set("n", "<leader>sE", function()
+    Snacks.picker.todo_comments({ dirs = { vim.api.nvim_buf_get_name(0) } })
+end, { desc = "Todo Tags" })

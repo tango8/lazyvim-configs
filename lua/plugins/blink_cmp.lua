@@ -73,8 +73,9 @@ return {
 					opts = {
 						dictionary_directories = { vim.fn.expand("~/github/dotfiles-latest/dictionaries") },
 						dictionary_files = {
-							vim.fn.expand("~/github/dotfiles-latest/neovim/neobean/spell/en.utf-8.add"),
-							vim.fn.expand("~/github/dotfiles-latest/neovim/neobean/spell/es.utf-8.add"),
+							-- don't have these
+							-- vim.fn.expand("~/github/dotfiles-latest/neovim/neobean/spell/en.utf-8.add"),
+							-- vim.fn.expand("~/github/dotfiles-latest/neovim/neobean/spell/es.utf-8.add"),
 						},
 					},
 				},
