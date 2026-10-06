@@ -23,7 +23,8 @@ return {
 			-- "tokyonight", "nord", "gruvbox", "catppuccin", "kanagawa",
 			-- "rose-pine", "nightfox", "onedark", "dracula", "vague"
 			-- "bamboo", "kanso", "vinyl",
-			colorscheme = "rose-pine",
+			colorscheme = "tokyonight",
+			-- The bckground is taken away by script to allow transparancy
 		},
 	},
 }
